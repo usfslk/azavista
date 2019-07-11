@@ -38,8 +38,7 @@ export default class Build extends Component {
   render () {
     let { likes, dislikes, liked, disliked } = this.state
     return (
-      <div>
-        <header className='App-header'>
+      <div className='App'>
           {liked ? (
             <button style={{ backgroundColor: 'darkblue', color: '#fff' }}
             onClick={this.prevLike}>
@@ -57,7 +56,6 @@ export default class Build extends Component {
           ) : (
             <button onClick={this.dislike}>Dislike | {dislikes}</button>
           )}
-        </header>
       </div>
     )
   }
