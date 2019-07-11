@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class Build extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      likes: 100,
+      dislikes: 100
+    }
+  }
+
+  componentDidMount = () => {}
+  componentDidMount = () => {}
+  like = () => {
+    let likes = this.state
+    this.setState({ likes: this.state.likes + 1, liked: true })
+    if (this.state.disliked) {
+      this.prevDislike();
+    }
+  }
+  prevLike = () => {
+    this.setState({ likes: this.state.likes - 1, liked: false })
+  }
+  dislike = () => {
+    let dislikes = this.state
+    this.setState({ dislikes: this.state.dislikes - 1, disliked: true })
+    if (this.state.liked) {
+      this.prevLike();
+    }
+  }
+  prevDislike = () => {
+    this.setState({  dislikes: this.state.dislikes + 1, disliked: false })
+  }
+
+  render () {
+    let { likes, dislikes, liked, disliked } = this.state
+    return (
+      <div>
+        <header className='App-header'>
+          {liked ? (
+            <button style={{ backgroundColor: 'darkblue', color: '#fff' }}
+            onClick={this.prevLike}>
+              Like | {likes}
+            </button>
+          ) : (
+            <button onClick={this.like}>Like | {likes}</button>
+          )}
+          <br />
+          {disliked ? (
+            <button style={{ backgroundColor: 'darkblue', color: '#fff' }}
+             onClick={this.prevDislike}>
+              Dislike | {dislikes}
+            </button>
+          ) : (
+            <button onClick={this.dislike}>Dislike | {dislikes}</button>
+          )}
+        </header>
+      </div>
+    )
+  }
 }
-
-export default App;
