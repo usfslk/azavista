@@ -8,8 +8,8 @@ export default class LikeDislike extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      likes: 100,
-      dislikes: 100
+      likes: 99,
+      dislikes: 99
     }
   }
 
