@@ -23,7 +23,7 @@ export default class Build extends Component {
 
   dislike = () => {
     let dislikes = this.state
-    this.setState({ dislikes: this.state.dislikes - 1, disliked: true })
+    this.setState({ dislikes: this.state.dislikes + 1, disliked: true })
     if (this.state.liked) {
       this.prevLike();
     }
@@ -34,7 +34,7 @@ export default class Build extends Component {
   }
 
   prevDislike = () => {
-    this.setState({  dislikes: this.state.dislikes + 1, disliked: false })
+    this.setState({  dislikes: this.state.dislikes - 1, disliked: false })
   }
 
   render () {
