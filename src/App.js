@@ -39,6 +39,8 @@ export default class LikeDislike extends Component {
     let { likes, dislikes, liked, disliked } = this.state
     return (
       <div className='App'>
+      <h2>Youssef Selkani</h2>
+      <br />
         {liked ? (
           <button
             style={{ backgroundColor: 'darkblue', color: '#fff' }}
