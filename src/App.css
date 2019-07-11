@@ -7,3 +7,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.btn {
+  background-color: #fff;
+  color: #111;
+  padding: 2vh
+}
