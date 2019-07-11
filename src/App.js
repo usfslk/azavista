@@ -1,3 +1,6 @@
+// Youssef Selkani
+// 2019
+
 import React, { Component } from 'react'
 import './App.css'
 
@@ -6,12 +9,10 @@ export default class Build extends Component {
     super(props)
     this.state = {
       likes: 100,
-      dislikes: 100
+      dislikes: 100,
     }
   }
 
-  componentDidMount = () => {}
-  componentDidMount = () => {}
   like = () => {
     let likes = this.state
     this.setState({ likes: this.state.likes + 1, liked: true })
@@ -19,9 +20,7 @@ export default class Build extends Component {
       this.prevDislike();
     }
   }
-  prevLike = () => {
-    this.setState({ likes: this.state.likes - 1, liked: false })
-  }
+
   dislike = () => {
     let dislikes = this.state
     this.setState({ dislikes: this.state.dislikes - 1, disliked: true })
@@ -29,6 +28,11 @@ export default class Build extends Component {
       this.prevLike();
     }
   }
+
+  prevLike = () => {
+    this.setState({ likes: this.state.likes - 1, liked: false })
+  }
+
   prevDislike = () => {
     this.setState({  dislikes: this.state.dislikes + 1, disliked: false })
   }
