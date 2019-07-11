@@ -4,7 +4,7 @@
 import React, { Component } from 'react'
 import './App.css'
 
-export default class Build extends Component {
+export default class LikeDislike extends Component {
   constructor (props) {
     super(props)
     this.state = {
