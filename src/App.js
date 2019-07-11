@@ -14,7 +14,6 @@ export default class Build extends Component {
   }
 
   like = () => {
-    let likes = this.state
     this.setState({ likes: this.state.likes + 1, liked: true })
     if (this.state.disliked) {
       this.prevDislike();
@@ -22,7 +21,6 @@ export default class Build extends Component {
   }
 
   dislike = () => {
-    let dislikes = this.state
     this.setState({ dislikes: this.state.dislikes + 1, disliked: true })
     if (this.state.liked) {
       this.prevLike();
